@@ -1,2 +1,8 @@
 
-php/accumulate/.exercism/
+.eslintrc
+
+babel.config.js
+
+node_modules/
+.exercism
+package-lock.json
