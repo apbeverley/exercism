@@ -4,8 +4,6 @@ class AllergiesTest extends PHPUnit\Framework\TestCase
 {
     public static function setUpBeforeClass() : void
     {
-
-        echo "Here";exit;
         require_once 'allergies.php';
     }
 
@@ -43,7 +41,7 @@ class AllergiesTest extends PHPUnit\Framework\TestCase
     public function provideListOfAllergen() : array
     {
         require_once 'allergies.php';
-        Allergies
+
         return [
             [new Allergen(Allergen::CATS), 'Only allergic to cats'],
             [new Allergen(Allergen::CHOCOLATE), 'Only allergic to chocolate'],
