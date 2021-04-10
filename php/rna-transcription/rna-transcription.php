@@ -9,12 +9,6 @@ function toRna(string $dnaStrand): string
         'A' => 'U'
     ];
 
-    $rnaString = '';
-
-    for ($i = 0; $i < strlen($dnaStrand); $i++) {
-        $rnaString .= $dnaStrandToRnaComplement[$dnaStrand[$i]];
-    }
-
-    return $rnaString;
+    return strtr($dnaStrand, $dnaStrandToRnaComplement);
 }
 
