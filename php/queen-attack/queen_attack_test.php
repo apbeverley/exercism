@@ -1,6 +1,6 @@
 <?php
 
-class QueenAttackTest extends PHPUnit\Framework\TestCase
+class queen_attack_test extends PHPUnit\Framework\TestCase
 {
     public static function setUpBeforeClass() : void
     {

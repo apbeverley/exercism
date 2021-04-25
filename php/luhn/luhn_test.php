@@ -1,6 +1,6 @@
 <?php
 
-class LuhnValidatorTest extends PHPUnit\Framework\TestCase
+class luhn_test extends PHPUnit\Framework\TestCase
 {
     public static function setUpBeforeClass() : void
     {
