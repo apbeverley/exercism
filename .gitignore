@@ -1,3 +1,17 @@
 node_modules/
 .exercism
 package-lock.json
+
+# Logs
+*.log
+
+# Dotenv
+.env
+.env.*
+!.env.example
+
+# OS and IDE files
+.idea
+
+# Mac OS
+*.DS_Store
