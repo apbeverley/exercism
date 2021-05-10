@@ -8,7 +8,7 @@
             $length = strlen($line);
             for ($x = 0; $x < $length; $x++) {
                 if (!isset($response[$x])) {
-                    $response[$x] = str_pad('', $index);
+                    $response[$x] = '';
                 }
                 
                 $response[$x] = str_pad($response[$x], $index).$line[$x];
