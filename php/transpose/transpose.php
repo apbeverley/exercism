@@ -4,14 +4,15 @@
     {
         $response = [''];
         
-        foreach ($input as $index => $line) {
-            $length = strlen($line);
+        foreach ($input as $index => $item) {
+            $length = strlen($item);
+            
             for ($x = 0; $x < $length; $x++) {
                 if (!isset($response[$x])) {
                     $response[$x] = '';
                 }
                 
-                $response[$x] = str_pad($response[$x], $index).$line[$x];
+                $response[$x] = str_pad($response[$x], $index).$item[$x];
             }
         }
         
