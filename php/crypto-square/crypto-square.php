@@ -3,7 +3,7 @@
     function crypto_square(string $message)
     {
         $response = [];
-        $normalized = preg_replace('/\W/', '', strtolower($message));
+        $normalized = preg_replace('/[^a-z0-9]/', '', strtolower($message));
         $rowLen = sqrt(strlen($normalized));
         $columnsLen = (int) ceil(strlen($normalized) / $rowLen);
         
@@ -21,5 +21,5 @@
             $c++;
         }
         
-        return implode(' ', str_replace('.',' ', $response));
+        return implode(' ', $response);
     }
