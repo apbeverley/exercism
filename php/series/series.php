@@ -13,11 +13,7 @@
             throw new Exception('invalid length');
         }
         
-        for ($x = 0; $x <= $maxDigits; $x++) {
-            if ($x + $length > $maxDigits) {
-                break;
-            }
-            
+        for ($x = 0; $x <= $maxDigits - $length; $x++) {
             $response[] = substr($digits, $x, $length);
         }
         
