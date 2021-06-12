@@ -2,7 +2,7 @@
     
     function isIsogram(string $word)
     {
-        $formatWord = mb_strtolower(preg_replace(['/\s+/', '/-/'], '', $word));
+        $formatWord = preg_replace('/[^a-z]/', '', mb_strtolower($word));
         $uniqueWord = array_unique(mb_str_split($formatWord));
         $wordAsArray = mb_str_split($formatWord);
         
