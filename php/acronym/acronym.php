@@ -4,8 +4,8 @@
     {
         $acronym = implode('', array_map(
             static function ( $word ) {
-                return mb_strtoupper($word[0]);
-            }, preg_split('/( |-)/', $phrase)));
+                return mb_substr($word, 0, 1);
+            }, preg_split('/\s+|-|\p{Ll}(?=\p{Lu})/u', $phrase)));
         
-        return strlen($acronym) > 1 ? $acronym : '';
+        return strlen($acronym) > 1 ? mb_strtoupper($acronym) : '';
     }
